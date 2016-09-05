@@ -1,0 +1,11 @@
+namespace DesignPatternLib.AbstractFactory
+{
+    /// <summary>
+    /// The 'AbstractFactory' interface. 
+    /// </summary>
+    public interface IContinentFactory
+    {
+        IHerbivore CreateHerbivore();
+        ICarnivore CreateCarnivore();
+    }
+}
