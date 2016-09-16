@@ -2,6 +2,7 @@
 using DesignPatternLib.AbstractFactory;
 using DesignPatternLib.Singleton;
 using DesignPatternLib.Strategy;
+using DesignPatternLib.Template;
 namespace ConsoleApplication
 {
     public class Program
@@ -57,6 +58,12 @@ namespace ConsoleApplication
             studentRecords.SortStrategy = new MergeSort();
             studentRecords.SortStudents();
             //Strategy end
+
+            //Template
+            Employee manager = new Manager();
+            manager.GetSalary();
+            Employee ceo = new CEO();
+            ceo.GetSalary();
             // Wait for user input
             Console.ReadKey();
         }
