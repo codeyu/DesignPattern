@@ -17,4 +17,4 @@ Design Pattern With C#
 
 | # | Pattern | UML Diagrams | Note |
 |---| ------- | ------------ | ---- |
-| 01| [Strategy](/Strategy) | [UML](/UML%20Diagrams/Strategy.pdf) | Behavioral |
+| 01| [Strategy](/DesignPatternLib/Strategy) | [UML](/UML%20Diagrams/Strategy.pdf) | Behavioral |
