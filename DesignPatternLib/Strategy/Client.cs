@@ -2,7 +2,7 @@ namespace DesignPatternLib.Strategy
 {
     public class Client
     {
-        public static void Run()
+        public static void Test()
         {
             // Two contexts following different strategies
             var studentRecords = new SortedList()
