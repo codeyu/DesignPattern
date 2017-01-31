@@ -19,7 +19,7 @@ namespace DesignPatternLib.Factory
         // Override
         public override string ToString()
         {
-            return this.GetType().Name;
+            return nameof(Document);
         }
     }
 }

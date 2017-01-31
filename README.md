@@ -24,3 +24,4 @@ Design Pattern With C#
 | 05| [Adapter](/DesignPatternLib/GangOfFour/Adapter) | [UML](/UML%20Diagrams/Adapter.pdf) | Structural |
 | 06| [AbstractFactory](/DesignPatternLib/GangOfFour/AbstractFactory) | [UML](/UML%20Diagrams/Abstract.pdf) | Creational |
 | 07| [Builder](/DesignPatternLib/GangOfFour/Builder) | [UML](/UML%20Diagrams/Builder.pdf) | Creational |
+| 08| [Factory Method](/DesignPatternLib/GangOfFour/Factory) | [UML](/UML%20Diagrams/Factory.pdf) | Creational |

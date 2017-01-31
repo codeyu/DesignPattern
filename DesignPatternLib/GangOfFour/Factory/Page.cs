@@ -8,7 +8,7 @@ namespace DesignPatternLib.Factory
         // Override. Display class name
         public override string ToString()
         {
-            return this.GetType().Name;
+            return nameof(Page);
         }
     }
 }
