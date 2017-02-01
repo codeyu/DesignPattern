@@ -22,6 +22,8 @@ Design Pattern With C#
 | 03| [Singleton](/DesignPatternLib/GangOfFour/Singleton) | [UML](/UML%20Diagrams/Singleton.pdf) | Creational |
 | 04| [Template](/DesignPatternLib/GangOfFour/Template) | [UML](/UML%20Diagrams/Template.pdf) | Behavioral |
 | 05| [Adapter](/DesignPatternLib/GangOfFour/Adapter) | [UML](/UML%20Diagrams/Adapter.pdf) | Structural |
-| 06| [AbstractFactory](/DesignPatternLib/GangOfFour/AbstractFactory) | [UML](/UML%20Diagrams/Abstract.pdf) | Creational |
+| 06| [Abstract Factory](/DesignPatternLib/GangOfFour/AbstractFactory) | [UML](/UML%20Diagrams/Abstract.pdf) | Creational |
 | 07| [Builder](/DesignPatternLib/GangOfFour/Builder) | [UML](/UML%20Diagrams/Builder.pdf) | Creational |
 | 08| [Factory Method](/DesignPatternLib/GangOfFour/Factory) | [UML](/UML%20Diagrams/Factory.pdf) | Creational |
+| 09| [Iterator](/DesignPatternLib/GangOfFour/Iterator) | [UML](/UML%20Diagrams/Iterator.pdf) | Behavioral |
+| 10| [Observer](/DesignPatternLib/GangOfFour/Observer) | [UML](/UML%20Diagrams/Observer.pdf) | Behavioral |
