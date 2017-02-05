@@ -1,6 +1,6 @@
 using System;
 
-namespace DesignPatternLib.Chain
+namespace DesignPatternLib.Chain.NETOptimized
 {
     // Purchase event argument holds purchase info
     public class PurchaseEventArgs : EventArgs
