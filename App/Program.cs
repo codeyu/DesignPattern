@@ -11,30 +11,47 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             
-            var assemblies = GetReferencingAssemblies("DesignPatternLib").Where(x=>x.FullName.StartsWith("DesignPatternLib")).FirstOrDefault();
+            var assemblies = GetReferencingAssemblies("DesignPatternLib").Where(x=>(x.FullName.StartsWith("DesignPatternLib"))).FirstOrDefault();
             if(assemblies != null)
             {
                 var dictTypes = new Dictionary<int,Type>();
                 var typesCount = assemblies.ExportedTypes.Count();
+                var LibCount = 0;
                 for(var i = 0; i < typesCount; i++)
                 {
-                    dictTypes.Add(i, assemblies.ExportedTypes.ElementAt(i));
-                    Console.WriteLine($"{i},{assemblies.ExportedTypes.ElementAt(i)}");
+                    if(assemblies.ExportedTypes.ElementAt(i).Name == "Client")
+                    {
+                        LibCount ++;
+                        dictTypes.Add(LibCount, assemblies.ExportedTypes.ElementAt(i));
+                        Console.WriteLine($"{LibCount},{assemblies.ExportedTypes.ElementAt(i)}");
+                    }
+                    
                 }
                 Console.WriteLine("Please input type index you want to run:");
                 var typeIndex = Console.ReadLine();
                 var index = -1;
-                while(string.IsNullOrEmpty(typeIndex) || !int.TryParse(typeIndex, out index) || index >= typesCount || index < 0)
+                while(string.IsNullOrEmpty(typeIndex) || !int.TryParse(typeIndex, out index) || index >= LibCount || index < 0)
                 {
                     Console.WriteLine("Input error! Please reinput:");
                     typeIndex = Console.ReadLine();
                 }
                 var curInsance = Activator.CreateInstance(dictTypes[index]);
                 Console.WriteLine("Please input method params:");
-                var param = Console.ReadLine().Split(' ');
-                curInsance.GetType().GetMethod("Test", BindingFlags.Public | BindingFlags.Static).Invoke(null,new object[] { param });
+                if(string.IsNullOrEmpty(Console.ReadLine()))
+                {
+                    curInsance.GetType().GetMethod("Test", BindingFlags.Public | BindingFlags.Static).Invoke(null, null);
+                }
+                else
+                {
+                    var param = Console.ReadLine().Split(',');
+                    curInsance.GetType().GetMethod("Test", BindingFlags.Public | BindingFlags.Static).Invoke(null,new object[] { param });
+                }
+                
             }
-        
+            else
+            {
+                Console.WriteLine("No DesignPatternLib");
+            }
         
         }
         public static IEnumerable<Assembly> GetReferencingAssemblies(string assemblyName)
