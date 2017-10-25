@@ -3,7 +3,7 @@ namespace DesignPatternLib.Proxy
     /// <summary>
     /// The 'RealSubject' class
     /// </summary>
-    class Math : IMath
+    public class Math : IMath
     {
         public double Add(double x, double y) { return x + y; }
         public double Sub(double x, double y) { return x - y; }

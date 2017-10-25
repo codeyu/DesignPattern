@@ -3,7 +3,7 @@ namespace DesignPatternLib.Proxy
     /// <summary>
     /// The 'Proxy Object' class
     /// </summary>
-    class MathProxy : IMath
+    public class MathProxy : IMath
     {
         private Math _math = new Math();
         public double Add(double x, double y)
