@@ -1,6 +1,5 @@
 using System;
 using Xunit;
-using DesignPatternLib.Proxy;
 using DesignPatternLib.CSharpPracticalPattern.Factory;
 
 namespace DesignPatternLib.Test
@@ -13,6 +12,14 @@ namespace DesignPatternLib.Test
             SimpleFactory  factory = new SimpleFactory();
             IProduct product = factory.Create();
             Assert.Equal(typeof(ConcreteProductA), product.GetType());
+        }
+        [Fact]
+        public void CSharpPracticalPattern_FactoryMethod_Test()
+        {
+            IFactory factory = (new Assembler()).Create<IFactory>();
+            Client client = new Client(factory);
+            IProductWithName product = client.GetProduct();
+            Assert.Equal("C", product.Name);
         }
     }
 }
